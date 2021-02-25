@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style> 
+
+	.drop-shadow
+	{
+		-webkit-filter: url(#shadow);
+	}
+	
+	.addAnimation 
+	{
+			animation: buttonTransition 1s 1  ;
+			r:167;
+	}
+	
+	@keyframes buttonTransition 
+	{
+		0%{
+		r: 100;
+		}
+		100% {
+		r: 167;
+		}
+
+	}
+	
+	body 
+	{
+    overscroll-behavior-y: contain;
+	background-color: black;
+	}
+	
+	.reverseAnimation {
+				animation: buttonTransition1 1s 1;
+				r:100px;
+				}
+				@keyframes buttonTransition1 
+				{
+					0%
+					{
+						r: 167;
+					}
+					100% 
+					{
+						r: 100;
+					}
+				}
+	
+	</style>	
+</head>
+
+
+<body id = "bodie" class="wrapper" onload="wsConnect(); rez(41)" onmouseup="tracking(null)" ontouchend="tracking(null)" onunload="ws.disconnect();" >
+
+
+	<svg id="svg1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 8000 14811" 
+ xmlns:xlink="http://www.w3.org/1999/xlink" >
+ <defs>
+ 
+	  <style type="text/css">
+	   <![CDATA[
+		@font-face { font-family:"Arial";src:url("#FontID0") format(svg)}
+		.str1 {stroke:aqua;stroke-width:55.5551}
+		.str4 {stroke:#666666;stroke-width:55.5551}
+		.str6 {stroke:#4D4D4D;stroke-width:27.7795}
+		.str0 {stroke:black;stroke-width:13.8898}
+		.str3 {stroke:black;stroke-width:13.8898}
+		.str2 {stroke:aqua;stroke-width:13.8898}
+		.str7 {stroke:transparent;stroke-width:13.8898}
+		.fil1 {fill:none}
+		.fil2 {fill:black}
+		.fil0 {fill:black}
+		.fil3 {fill:#666666}
+		.fil4 {fill:aqua}
+		.fil5 {fill:orange}
+		.fil6 {fill:transparent}
+		.fnt1 {font-weight:normal;font-size:277.78px;font-family:'Arial'}
+		.fnt2 {font-weight:normal;font-size:347.22px;font-family:'Arial'}
+		.fnt3 {font-weight:normal;font-size:486.11px;font-family:'Arial'}
+		.fnt0 {font-weight:normal;font-size:694.445px;font-family:'Arial'}
+	   ]]>
+	  </style>
+    <filter id="shadow">
+		  <feDropShadow dx="0" dy="0" flood-color="aqua" stdDeviation="200"/>
+	</filter>
+ </defs>
+			<g id="Main Elements">
+			
+				<rect id="main background" class="fil0 str0" width="8000" height="14811"/>
+				
+				<path id="main 4circles" class="fil0 str1" d="M6684 1025c-36,36 -94,36 -129,0 -36,-36 -36,-94 0,-129 35,-36 93,-36 129,0 36,35 36,93 0,129zm369 0c-36,36 
+				-93,36 -129,0 -36,-36 -36,-94 0,-129 36,-36 93,-36 129,0 36,35 36,93 0,129zm-369 340c-36,36 -94,36 -129,0 -36,-36 -36,-93 0,-129 35,-36 93,-36 129,
+				0 36,36 36,93 0,129zm369 0c-36,36 -93,36 -129,0 -36,-36 -36,-93 0,-129 36,-36 93,-36 129,0 36,36 36,93 0,129z"/>
+				<circle id="main 4circles button" cx="6800" cy="1150" r="490" fill="transparent" onclick="selectmenu(1,'schedule', 24)"/>
+			   
+				<circle id = "main button" class="fil2 " cx="4000" cy="7406" r="2153" />
+				
+				<circle id = "main button glow" class="fil2 drop-shadow" cx="4000" cy="7406" r="2153" onclick="active1()"/>
+				
+			   <text id="zeroword" x="1012" y="13414"  class="fil3 fnt1" onclick="selectmenu(2,'zero', 41);"; >Zero</text>
+			   <text id="zero" x="1584" y="13414"  class="fil3 fnt0" onclick="selectmenu(2,'zero', 41);" >10</text>  
+			   <text id="capword" x="5296" y="13414"  class="fil3 fnt1" onclick="selectmenu(2,'cap', 41);" >cap</text>
+			   <text id="cap" x="5905" y="13414"  class="fil3 fnt0" onclick="selectmenu(2,'cap', 41);" >25</text>
+			   
+			   
+			   <text id="day0" x="1134" y="11775"  class="fil3 fnt1" onclick="selectmenu(3,'day')" >Mon</text>
+			   <text id="day1" x="1992" y="11775"  class="fil3 fnt1" onclick="selectmenu(3,'day')">Tue</text>
+			   <text id="day2" x="2850" y="11775"  class="fil3 fnt1" onclick="selectmenu(3,'day')">Wed</text>
+			   <text id="day3" x="3709" y="11775"  class="fil3 fnt1" onclick="selectmenu(3,'day')">Thu</text>
+			   <text id="day4" x="4650" y="11775"  class="fil3 fnt1" onclick="selectmenu(3,'day')">Fri</text>
+			   <text id="day5" x="5425" y="11775"  class="fil3 fnt1" onclick="selectmenu(3,'day')">Sat</text>
+			   <text id="day6" x="6284" y="11775"  class="fil3 fnt1" onclick="selectmenu(3,'day')">Sun</text>
+
+				<line id="0" class="fil1 str6" x1="1105" y1="11900" x2="1674" y2= "11900" />
+				<line id="1" class="fil1 str6" x1="1966" y1="11900" x2="2535" y2= "11900" />
+				<line id="2" class="fil1 str6" x1="2827" y1="11900" x2="3396" y2= "11900" />
+				<line id="3" class="fil1 str6" x1="3689" y1="11900" x2="4257" y2= "11900" />
+				<line id="4" class="fil1 str6" x1="4550" y1="11900" x2="5119" y2= "11900" />
+				<line id="5" class="fil1 str6" x1="5411" y1="11900" x2="5980" y2= "11900" />
+				<line id="6" class="fil1 str6" x1="6272" y1="11900" x2="6841" y2= "11900" />
+				
+				<text id="timeleft" x="3165" y="3599" class="fil3 fnt0" onclick="selectmenu(4,'schedule', 24)">00:00</text>
+				<text id="tcount" x="3224" y="7848"  class="fil3 fnt2" onclick="arc()" >00000001</text>
+				<text id="bcount" x="3460" y="7431"  class="fil3 fnt3">9/30</text>
+				
+				<path class="fil3" transform="scale(1.5) translate(0 -600) " d="M2511 2113c1,1 1,1 2,2 1,0 2,1 2,2 1,0 2,1 2,2 1,0 2,1 2,2 1,1 1,1 2,2 0,1 0,2 1,3 0,1 0,1 1,2 0,1 0,2 0,3 1,1 1,2 1,3 0,1 0,2 0,3 0,1 0,2 0,4 0,
+				1 -1,2 -1,3 0,2 -1,3 -1,4 -1,1 -1,2 -2,3 -1,1 -1,2 -2,3 -1,1 -2,2 -2,3 -1,1 -2,1 -3,2 -1,1 -3,2 -4,2 -1,1 -2,1 -3,2 -2,0 -3,1 -4,1 -1,0 -2,1 -4,1 -1,0 -2,0 -4,0 -1,0 -2,
+				0 -3,0 -1,0 -3,-1 -4,-1 -1,0 -2,-1 -3,-1 -1,-1 -2,-1 -3,-2 -1,0 -2,-1 -3,-2 -1,0 -2,-1 -3,-2 -1,-1 -2,-2 -3,-3 0,-1 -1,-2 -2,-3 0,-1 -1,-2 -2,-3 0,-2 0,-3 -1,-4 0,-1 0,-2 -1,
+				-4 0,-1 0,-2 0,-3 0,-2 0,-3 0,-4 1,-1 1,-3 1,-4 1,-1 1,-2 1,-3 1,-2 2,-3 2,-4 1,-1 2,-2 2,-3 1,-1 2,-2 3,-3 1,-1 2,-1 3,-2 1,-1 2,-1 3,-2 1,-1 2,-1 3,-2 1,0 2,0 3,-1 1,0 3,0 4,
+				0 1,0 2,-1 3,-1 1,0 2,0 3,1 1,0 2,0 3,0 1,0 2,0 3,1 1,0 2,0 3,0 1,1 2,1 2,2 1,0 2,1 3,1zm-36 -12c-2,1 -3,1 -4,2 -1,1 -2,2 -3,2 -1,1 -2,2 -3,3 -1,1 -2,2 -3,3 -1,1 -2,2 -3,3 0,
+				1 -1,2 -2,4 0,1 -1,2 -1,3 -1,1 -1,2 -2,4 0,1 0,2 -1,3 0,2 0,3 0,4 0,2 0,3 -1,4 1,2 1,3 1,5 0,1 0,2 0,4 0,1 1,2 1,3 1,2 1,3 2,4 0,1 1,2 1,4 1,1 2,2 2,3 1,1 2,2 3,3 1,1 2,2 3,
+				3 1,1 2,2 3,3 1,1 2,2 3,2 1,1 2,2 3,2 2,1 3,2 4,2 1,1 2,1 4,1 1,1 2,1 4,1 1,1 2,1 4,1 1,0 2,0 4,0 2,0 3,0 5,0 2,0 3,-1 5,-1 1,0 3,-1 4,-1 2,-1 3,-1 5,-2 0,0 1,0 2,-1 0,0 1,0 2,
+				-1 0,0 1,-1 1,-1 1,0 1,-1 2,-1 0,-1 1,-1 1,-2 0,0 1,-1 1,-1 1,-1 1,-1 1,-2 0,0 1,-1 1,-1l0 13 14 0 0 -78 -14 0 0 14c0,-1 -1,-2 -1,-2 0,-1 0,-1 -1,-2 0,0 0,-1 -1,-1 0,-1 0,-1 -1,
+				-2 0,0 -1,-1 -1,-1 -1,-1 -1,-1 -2,-1 -1,-1 -1,-1 -2,-2 0,0 -1,0 -2,-1 -1,0 -3,-1 -4,-1 -2,-1 -3,-1 -5,-2 -1,0 -3,0 -5,0 -1,-1 -3,-1 -5,-1 -1,0 -3,0 -4,1 -1,0 -3,0 -4,0 -1,0 -3,1 -4,
+				1 -1,0 -3,1 -4,1 -1,1 -2,1 -3,2zm80 -3l0 78 14 0 0 -26 0 -5 0 -4 0 -4 1 -3c0,-1 0,-2 0,-3l0 -3c0,-1 0,-1 1,-2 0,-1 0,-1 0,-2 0,0 0,-1 1,-2 0,0 0,-1 0,-2l1 -1c0,-1 0,-1 1,-2 0,0 0,
+				-1 1,-1 0,-1 0,-1 0,-1 1,-1 1,-1 1,-2 1,0 1,0 1,0 1,-1 2,-2 2,-2 1,0 2,-1 2,-1 1,0 1,-1 2,-1 1,0 1,0 2,0l1 0c0,0 1,0 1,0l2 1c1,0 2,0 3,0l6 -9c-1,-1 -2,-1 -3,-2 -1,0 -2,-1 -3,
+				-1 -1,0 -2,-1 -3,-1 -1,0 -2,0 -2,0 -1,0 -2,0 -3,0 -1,0 -2,1 -3,1 -1,0 -2,0 -3,1 -1,0 -2,1 -3,1 0,0 0,1 -1,1 0,0 -1,1 -1,1 0,0 -1,1 -1,1 0,0 -1,1 -1,1 0,0 0,1 -1,1 0,1 0,1 0,2 0,
+				0 0,0 0,1 -1,0 -1,1 -1,1l0 -11 -14 0zm52 59c0,0 0,1 0,2 1,0 1,1 1,2 1,0 1,1 2,2 0,0 0,1 1,1 0,1 1,2 1,2 1,1 1,1 2,2 0,0 1,1 1,1 1,1 2,1 2,1 1,1 1,1 2,2 1,0 1,0 2,1 1,0 2,0 2,1 1,
+				0 2,0 3,1 0,0 1,0 2,0 1,0 2,1 2,1 1,0 2,0 3,0 1,0 2,0 3,0 1,0 2,0 3,0 1,0 2,0 3,0 1,0 2,0 3,0 0,0 1,0 2,0 1,-1 2,-1 3,-1 1,0 2,0 2,-1 1,0 2,0 3,0 1,-1 1,-1 2,-1 1,-1 1,-1 2,-2 1,
+				0 2,0 2,-1 1,0 1,-1 2,-1 1,-1 1,-1 2,-2 0,0 1,-1 1,-1 1,-1 1,-1 2,-2 0,0 1,-1 1,-2 0,0 1,-1 1,-1 1,-1 1,-2 1,-2 0,-1 1,-2 1,-3 0,0 1,-1 1,-2 0,-1 0,-2 0,-3 1,0 1,-1 1,-2 0,-1 0,
+				-2 0,-3 1,-2 1,-3 1,-4 0,-1 0,-2 0,-3l0 -4 0 -38 -14 0 0 36 0 3 0 3c0,1 0,2 0,3l0 3c0,0 0,1 0,2l-1 1c0,1 0,1 0,2 0,0 0,1 0,1 -1,1 -1,2 -1,3 -1,1 -1,2 -2,2 -1,1 -1,2 -2,3 -1,
+				0 -2,1 -3,2 -1,0 -2,1 -3,1 -1,1 -2,1 -3,1 -1,1 -2,1 -3,1 -2,0 -3,0 -4,0 -1,0 -3,0 -4,0 -1,0 -2,0 -3,-1 -1,0 -2,0 -3,-1 -1,0 -2,-1 -3,-1 -1,-1 -2,-1 -2,-2 -1,-1 -2,-2 -2,-3 -1,
+				0 -2,-1 -2,-2 -1,-1 -1,-3 -1,-4l-1 -1c0,0 0,-1 0,-1 0,-1 0,-1 0,-2l0 -2 -1 -2 0 -3 0 -3 0 -3 0 -36 -13 0 0 37 0 4c0,1 0,3 0,4 0,1 0,2 0,3 0,1 0,3 1,4 0,1 0,2 0,2 0,1 0,2 1,3 0,
+				1 0,2 1,3zm90 -87l0 107 14 0 0 -34 35 34 17 0 -44 -40 40 -38 -17 0 -31 31 0 -60 -14 0zm128 91c-1,1 -2,1 -3,2 -2,0 -3,1 -4,1 -1,0 -3,1 -4,1 -1,0 -2,0 -4,0 -1,0 -2,0 -3,0 -1,0 -3,
+				-1 -4,-1 -1,0 -2,-1 -3,-1 -1,-1 -2,-1 -3,-2 -1,0 -2,-1 -3,-2 -1,0 -2,-1 -3,-2 -1,-1 -2,-2 -3,-3 0,-1 -1,-2 -2,-3 0,-1 -1,-2 -2,-3 0,-2 -1,-3 -1,-4 0,-1 0,-2 -1,-4 0,-1 0,-2 0,-3 0,
+				-2 0,-3 0,-4 1,-1 1,-3 1,-4 0,-1 1,-2 1,-3 1,-2 1,-3 2,-4 1,-1 2,-2 2,-3 1,-1 2,-2 3,-3 1,-1 2,-1 3,-2 0,-1 2,-1 3,-2 1,-1 2,-1 3,-2 1,0 2,0 3,-1 1,0 3,0 4,0 1,0 2,-1 3,-1 1,0 2,
+				0 3,1 1,0 2,0 3,0 1,0 2,0 3,1 1,0 2,0 3,0 1,1 2,1 2,2 1,0 2,1 3,1 1,1 1,1 2,2 1,0 2,1 2,2 1,0 2,1 2,2 1,0 1,1 2,2 1,1 1,1 1,2 1,1 1,2 2,3 0,1 0,1 1,2 0,1 0,2 0,3 0,1 1,2 1,3 0,1 0,
+				2 0,3 0,1 0,2 0,4 -1,1 -1,2 -1,3 0,2 -1,3 -1,4 -1,1 -1,2 -2,3 -1,1 -1,2 -2,3 -1,1 -2,2 -3,3 0,1 -1,1 -2,2 -2,1 -3,2 -4,2zm-56 -16c0,1 1,2 1,3 0,2 1,3 1,4 1,1 2,2 2,4 1,1 1,2 2,3 1,
+				1 2,2 3,3 1,1 2,2 3,3 1,1 2,2 3,3 1,1 2,2 3,2 1,1 2,2 3,2 1,1 3,2 4,2 1,1 2,1 4,1 1,1 2,1 4,1 1,1 2,1 4,1 1,0 2,0 4,0 1,0 3,0 5,0 1,0 3,-1 5,-1 1,0 3,-1 4,-1 2,-1 3,-1 5,-2 0,0 1,
+				0 2,-1 0,0 1,0 1,-1 1,0 2,-1 2,-1 1,0 1,-1 2,-1 0,-1 1,-1 1,-2 0,0 1,-1 1,-1 0,-1 1,-1 1,-2 0,0 1,-1 1,-1l0 13 14 0 0 -78 -14 0 0 14c0,-1 -1,-2 -1,-2 0,-1 0,-1 -1,-2 0,0 0,-1 -1,
+				-1 0,-1 -1,-1 -1,-2 0,0 -1,-1 -1,-1 -1,-1 -2,-1 -2,-1 -1,-1 -1,-1 -2,-2 -1,0 -1,0 -2,-1 -1,0 -3,-1 -4,-1 -2,-1 -3,-1 -5,-2 -2,0 -3,0 -5,0 -1,-1 -3,-1 -5,-1 -1,0 -3,0 -4,1 -1,0 -3,
+				0 -4,0 -1,0 -3,1 -4,1 -1,0 -3,1 -4,1 -1,1 -2,1 -3,2 -2,1 -3,1 -4,2 -1,1 -2,2 -3,2 -1,1 -2,2 -3,3 -1,1 -2,2 -3,3 -1,1 -2,2 -3,3 0,1 -1,2 -2,4 0,1 -1,2 -2,3 0,1 -1,2 -1,4 0,1 -1,
+				2 -1,3 0,2 0,3 0,4 -1,2 -1,3 -1,4 0,2 0,3 1,5 0,1 0,2 0,4zm134 13c0,1 0,1 -1,2 0,1 -1,1 -1,2 -1,0 -1,1 -2,1 -1,0 -2,1 -2,1 -1,0 -2,1 -3,1 0,0 -1,0 -2,0 -1,0 -1,0 -2,0 0,0 -1,
+				0 -2,-1 0,0 -1,0 -1,0 -1,-1 -2,-1 -2,-1 -1,0 -2,-1 -2,-1 -1,-1 -1,-1 -2,-2 -1,0 -2,-1 -2,-1 -1,-1 -2,-2 -2,-2l-8 8c0,1 1,2 2,3 1,1 2,2 3,2 0,1 1,2 2,2 1,1 2,2 3,2 1,1 2,1 3,1 2,
+				1 3,1 4,1 1,0 2,1 3,1 1,0 2,0 3,0 1,0 2,0 3,0 1,0 2,0 3,0 1,-1 2,-1 2,-1 1,0 2,0 3,-1 0,0 1,0 2,-1 1,0 1,0 2,-1 1,0 1,-1 2,-1 1,-1 1,-1 2,-2 1,-1 1,-1 2,-2 0,0 1,-1 1,-2 1,0 1,
+				-1 1,-1 1,-1 1,-2 1,-2 1,-1 1,-2 1,-3 0,0 1,-1 1,-2 0,0 0,-1 0,-2 0,-1 0,-1 0,-2 0,-1 0,-2 0,-3 0,-1 -1,-2 -1,-3 0,-2 -1,-3 -1,-4 -1,-1 -1,-2 -2,-3 0,0 -1,0 -1,-1 0,0 -1,-1 -1,
+				-1 -1,-1 -1,-1 -2,-1 0,-1 -1,-1 -2,-2 0,0 -1,-1 -2,-1l-2 -2 -2 -1 -3 -1c-1,-1 -2,-2 -4,-2 -1,-1 -1,-2 -2,-2 -1,-1 -2,-1 -3,-2 0,-1 -1,-1 -1,-2 -1,0 -1,-1 -1,-1 -1,-1 -1,-1 -1,
+				-2 0,0 0,-1 0,-1 0,-1 0,-1 0,-2 0,0 0,-1 0,-2 0,0 0,-1 0,-1 0,-1 1,-1 1,-2 0,0 1,-1 1,-1 0,-1 1,-1 1,-1 1,0 1,-1 1,-1 1,0 1,0 2,0 0,-1 1,-1 1,-1 1,0 1,0 2,1 0,0 1,0 1,0 1,0 1,
+				0 2,1 0,0 1,0 1,0 1,1 2,1 2,2 1,0 1,0 2,1 1,1 1,1 2,2 1,0 1,1 2,2l9 -8c-1,-1 -2,-2 -3,-3 -1,-1 -2,-2 -3,-3 -1,0 -2,-1 -3,-2 -1,0 -2,-1 -3,-2 0,0 -1,-1 -2,-1 -1,0 -2,-1 -3,-1 -1,
+				0 -2,0 -3,0 -1,-1 -2,-1 -3,-1 -1,0 -2,0 -2,0 -1,0 -2,1 -2,1 -1,0 -2,0 -2,0 -1,0 -2,1 -2,1 -1,0 -2,0 -2,1 -1,0 -1,0 -2,1 -1,0 -1,1 -2,1 0,0 -1,1 -1,1 -1,1 -1,1 -2,2 0,0 0,1 -1,
+				2 0,0 -1,1 -1,1 0,1 0,2 -1,2 0,1 0,1 0,2 -1,1 -1,1 -1,2 0,1 0,2 0,2 0,1 0,2 0,2 0,2 0,3 0,4 0,1 0,2 1,3 0,1 0,2 1,3 0,1 1,2 2,3 0,0 0,1 1,1 0,1 0,1 1,1 0,1 1,1 1,2 1,0 1,1 2,
+				1 1,1 1,1 2,2 0,0 1,0 2,1l2 1c1,1 2,1 3,2l2 1 2 1 1 1c1,0 1,0 2,1l1 1 1 0c1,1 1,1 1,1l1 1c0,0 1,1 1,1 0,1 1,1 1,2 0,0 0,1 0,1 0,1 0,2 0,2 0,1 0,2 0,2 0,1 0,2 -1,2zm88 -75l0 93
+				14 0 0 -93 23 0 0 -12 -60 0 0 12 23 0zm51 -12l0 105 63 0 0 -12 -50 0 0 -39 50 0 0 -12 -50 0 0 -30 50 0 0 -12 -63 0zm89 89c0,1 1,2 2,2 1,1 1,2 2,2 1,1 2,2 2,2 1,1 2,
+				2 3,2 0,1 1,1 2,2 1,0 2,1 3,1 0,1 1,1 2,2 1,0 2,0 3,1 1,0 2,1 3,1 1,0 2,1 3,1 1,0 2,0 3,1 1,0 2,0 3,0 1,0 2,1 3,1 1,0 2,0 3,0 1,0 2,0 3,0 2,0 3,0 4,0 1,0 2,0 4,0 1,
+				0 2,0 3,0 2,0 3,0 4,0 1,-1 2,-1 3,-1 2,0 3,0 4,-1 1,0 2,0 3,-1 1,0 2,-1 3,-1 1,0 2,-1 3,-1 1,-1 2,-1 3,-2 1,0 2,-1 3,-1 1,-1 2,-2 3,-2 1,-1 2,-2 3,-2 1,-1 1,-2 2,
+				-2 1,-1 2,-2 3,-3 0,-1 1,-1 2,-2 1,-1 1,-2 2,-3l-11 -7c-1,1 -2,3 -4,4 -1,1 -3,2 -4,4 -1,1 -3,2 -4,3 -2,0 -3,1 -5,2 -2,1 -3,1 -5,2 -1,0 -3,1 -5,1 -1,1 -3,1 -5,1 -2,
+				0 -3,0 -5,0 -2,0 -3,0 -5,0 -1,0 -3,0 -4,0 -1,-1 -3,-1 -4,-1 -2,-1 -3,-1 -4,-2 -2,0 -3,-1 -4,-1 -1,-1 -3,-2 -4,-2 -1,-1 -2,-2 -3,-3 -1,-1 -2,-2 -3,-3 -1,-1 -2,-2 -3,
+				-3 -1,-1 -2,-2 -3,-3 -1,-1 -1,-2 -2,-4 -1,-1 -1,-2 -2,-3 0,-2 -1,-3 -1,-4 -1,-2 -1,-3 -1,-5 0,-1 -1,-3 -1,-4 0,-1 0,-3 0,-5 0,-1 0,-2 0,-3 0,-1 0,-2 0,-3 0,-1 1,-2 1,
+				-3 0,0 0,-1 0,-2 1,-1 1,-2 1,-3 1,-1 1,-2 1,-3 1,-1 1,-1 1,-2 1,-1 1,-2 2,-3 0,-1 1,-1 1,-2 1,-1 1,-2 2,-2 0,-1 1,-2 2,-3 0,0 1,-1 2,-2 0,0 1,-1 2,-1 0,-1 1,-2 2,-2 1,
+				-1 1,-1 2,-2 1,0 2,-1 3,-1 0,-1 1,-1 2,-1 1,-1 2,-1 3,-2 1,0 1,0 2,0 1,-1 2,-1 3,-1 1,-1 2,-1 3,-1 1,0 2,0 3,0 1,0 1,-1 2,-1 1,0 2,0 3,0 2,0 4,0 6,1 2,0 3,0 5,0 2,1 3,1 5,
+				2 2,0 3,1 5,2 1,0 3,1 4,2 2,1 3,2 5,3 1,1 3,2 4,4 1,1 3,2 4,4l11 -8c-1,0 -1,-1 -2,-2 -1,-1 -1,-2 -2,-3 -1,0 -2,-1 -3,-2 0,-1 -1,-1 -2,-2 -1,-1 -2,-1 -3,-2 -1,-1 -1,-1 -2,
+				-2 -1,0 -2,-1 -3,-1 -1,-1 -2,-2 -3,-2 -1,0 -2,-1 -4,-1 -1,-1 -2,-1 -3,-2 -1,0 -2,0 -3,-1 -1,0 -2,0 -4,0 -1,-1 -2,-1 -3,-1 -1,0 -3,0 -4,0 -1,-1 -2,-1 -3,-1 -2,0 -3,0 -4,
+				0 -2,0 -4,0 -6,0 -2,1 -4,1 -6,1 -2,1 -4,1 -6,1 -1,1 -3,1 -5,2 -2,1 -3,2 -5,2 -1,1 -3,2 -5,3 -1,1 -3,2 -4,3 -2,1 -3,3 -4,4 -2,1 -3,3 -4,4 -1,1 -2,3 -3,4 -2,2 -2,3 -3,5 -1,
+				1 -2,3 -3,5 0,1 -1,3 -1,4 -1,2 -1,4 -2,6 0,1 0,3 0,5 -1,2 -1,4 -1,6 0,2 0,3 0,5 1,2 1,4 1,5 0,2 1,4 1,5 1,2 1,3 2,5 0,2 1,3 2,5 0,1 1,3 2,4 1,1 2,3 3,4 1,1 2,3 3,4zm114
+				-89l0 105 14 0 0 -50 48 0 0 50 14 0 0 -105 -14 0 0 43 -48 0 0 -43 -14 0zm-1323 -4c6,-9 12,-19 19,-28 14,-20 29,-40 46,-58 4,-4 7,-8 11,-12 14,-14 29,-28 44,-41 15,
+				-12 31,-23 48,-35 3,-2 7,-4 10,-6 2,-2 4,-3 6,-3 3,-1 5,-2 7,-3 2,0 4,0 5,0 2,0 4,1 6,1 2,1 5,2 7,4 2,1 4,2 5,3 19,12 36,27 53,41 7,6 13,11 20,17 16,14 31,28 45,44 9,
+				10 17,20 25,31 0,-1 0,-3 -1,-4 0,-1 -1,-2 -2,-3 -2,-3 -3,-6 -5,-8 -6,-8 -12,-16 -18,-24 -9,-11 -19,-23 -29,-34 -6,-6 -12,-13 -19,-20 -5,-6 -11,-11 -17,-17 -10,-10 -21,-19 -32,
+				-28 -10,-8 -20,-16 -30,-25 -8,-7 -16,-14 -25,-19 -3,-2 -6,-3 -9,-4 -2,-1 -5,-1 -7,-1 -4,0 -7,1 -10,2 -2,1 -4,2 -6,3 -19,9 -35,21 -51,35 -24,20 -47,41 -67,63 -40,43 -72,92 -98,
+				144 -16,33 -29,67 -39,102 -8,25 -14,49 -19,74 -1,8 -3,17 -5,25 -2,15 -5,30 -7,45 0,3 -1,6 -1,8 0,4 0,8 2,12 1,1 2,2 4,3 1,2 3,3 6,4 10,5 22,9 33,14 14,5 29,12 44,17 38,14 78,22 119,
+				28 29,4 58,6 87,8 -1,-1 -3,-2 -4,-2 -1,-1 -3,-1 -4,-1 -1,0 -3,0 -5,0 -2,0 -5,0 -7,-1 -11,0 -21,-2 -31,-3 -14,-3 -27,-5 -40,-8 -4,0 -8,-1 -12,-2 -14,-3 -27,-7 -40,-11 -3,-1 -6,-2 -9,
+				-3 -10,-3 -20,-7 -30,-11 -17,-6 -34,-10 -49,-19 -2,-1 -4,-2 -6,-4 -3,-2 -5,-4 -6,-6 -1,-2 -2,-4 -2,-6 0,-1 0,-2 0,-3 0,-1 0,-3 0,-4 0,-1 0,-3 0,-4 3,-22 7,-43 11,-65 2,-5 3,-11 4,
+				-16 9,-34 19,-68 32,-101 12,-29 27,-58 43,-85zm23 206c-1,-1 -1,-2 -2,-4 0,-1 0,-3 0,-4 0,-2 0,-4 0,-6 0,-2 0,-3 1,-5 0,-3 1,-6 2,-9 1,-4 2,-8 3,-12 4,-16 7,-32 12,-47 2,-4 3,-8 4,
+				-12 4,-10 8,-20 13,-29 3,-7 7,-14 11,-21 4,-6 8,-12 12,-18 1,-1 1,-2 2,-3 0,-2 0,-3 0,-4 -9,12 -18,25 -26,38 -12,20 -22,41 -30,62 -3,8 -5,16 -7,24 -4,15 -6,30 -10,45 0,3 -1,6 -1,
+				9 0,2 1,4 2,5 0,1 1,2 2,3 1,0 2,1 2,1 11,6 24,10 36,13 10,3 20,6 29,8 17,4 33,7 50,9 27,2 54,-1 81,-3l0 -1c-12,0 -24,0 -35,0 -12,-1 -24,-2 -36,-3 -5,-1 -11,-1 -17,
+				-2 -6,-1 -12,-2 -17,-4 -8,-1 -15,-3 -23,-5 -11,-3 -23,-7 -34,-11 -3,-1 -7,-2 -10,-4 -3,-1 -5,-2 -8,-4 -2,-2 -4,-3 -6,-6zm286 -167c14,22 26,46 36,70 8,18 14,37 19,56 4,
+				15 7,30 8,45 1,9 2,19 2,28 0,1 0,3 0,4 0,2 0,3 -1,4 0,2 -2,4 -3,6 -1,2 -3,3 -5,4 -3,2 -6,3 -9,5 -5,2 -10,4 -15,6 -3,1 -7,2 -10,4 -5,2 -10,4 -15,6 -11,4 -23,8 -35,12 -3,1 -7,2 -11,
+				3 -4,1 -8,1 -12,2 -8,2 -16,3 -25,3 2,1 4,1 6,1 1,0 2,0 3,0 1,0 2,0 3,0 13,-1 26,-4 39,-7 5,-1 11,-2 16,-3 14,-4 28,-8 41,-13 5,-2 10,-4 16,-6 5,-2 11,-5 16,-7 7,-3 13,-5 20,-8 2,
+				-1 5,-3 7,-5 1,-1 2,-2 3,-3 1,-1 1,-2 2,-4 0,-1 0,-3 0,-5 0,-1 0,-2 0,-4 0,-10 -1,-20 -2,-29 -2,-27 -9,-54 -17,-79 -11,-33 -25,-64 -43,-93 -9,-15 -19,-30 -30,-44 -9,-11 -18,-22 -28,
+				-33 -5,-5 -11,-11 -16,-16 -10,-9 -21,-18 -31,-27 -9,-8 -18,-16 -27,-22 -2,-1 -4,-3 -6,-4 -3,-1 -5,-2 -8,-2 -2,0 -4,0 -6,0 -2,1 -4,2 -6,3 -3,1 -6,2 -9,4 -3,2 -7,5 -10,7 -5,4 -9,
+				8 -13,13 3,-1 5,-2 8,-3 1,-1 3,-1 5,-2 1,0 2,0 4,0 1,0 2,0 4,1 1,0 3,1 4,2 2,0 3,1 4,2 2,1 4,3 6,4 7,6 14,12 21,17 6,6 13,11 19,16 14,13 28,26 41,40 14,16 28,33 40,51zm673 165l0 
+				-32 11 0c3,0 4,0 6,1 2,0 3,1 5,2 1,1 3,3 4,5 0,3 1,5 1,8 0,2 0,5 -1,7 -1,1 -1,3 -2,4 -1,1 -2,2 -3,3 -1,1 -3,1 -4,2 -2,0 -4,0 -5,0l-12 0zm4 -3l7 0c2,0 4,-1 5,-1 1,0 2,-1 3,-2 1,-1 2,
+				-2 2,-4 1,-2 1,-4 1,-6 0,-3 0,-6 -1,-8 -1,-2 -3,-3 -4,-3 -2,-1 -4,-1 -6,-1l-7 0 0 25zm29 3l0 -32 14 0c3,0 6,0 7,1 2,1 3,2 4,3 1,1 1,3 1,5 0,2 -1,4 -2,6 -2,1 -4,2 -7,3 1,0 2,1 3,1 1,
+				1 2,3 3,5l6 8 -6 0 -4 -6c-1,-2 -2,-4 -3,-5 -1,-1 -2,-2 -2,-2 -1,0 -2,-1 -2,-1 -1,0 -2,0 -3,0l-5 0 0 14 -4 0zm4 -18l10 0c2,0 3,0 4,0 1,-1 2,-1 3,-2 0,-1 1,-2 1,-3 0,-2 -1,-3 -2,-4 -1
+				,-1 -3,-1 -5,-1l-11 0 0 10zm29 18l0 -32 24 0 0 4 -20 0 0 10 19 0 0 4 -19 0 0 11 21 0 0 3 -25 0zm27 0l13 -32 4 0 14 32 -5 0 -4 -9 -14 0 -3 9 -5 0zm9 -13l12 0 -4 -9c-1,-3 -2,-5 -2,-7 
+				-1,3 -1,5 -2,7l-4 9zm25 13l0 -32 7 0 7 23c1,2 2,4 2,5 0,-2 1,-3 2,-6l8 -22 6 0 0 32 -5 0 0 -27 -9 27 -4 0 -10 -27 0 27 -4 0zm52 0l0 -32 4 0 0 32 -4 0zm12 0l0 -32 4 0 18 25 0 -25 4 
+				0 0 32 -5 0 -17 -25 0 25 -4 0zm43 0l-13 -32 5 0 8 23c1,2 1,4 2,6 0,-2 1,-4 2,-6l8 -23 5 0 -13 32 -4 0zm21 0l0 -32 24 0 0 4 -20 0 0 10 18 0 0 4 -18 0 0 11 20 0 0 3 -24 0zm30 0l0 -32
+				5 0 17 25 0 -25 4 0 0 32 -4 0 -17 -25 0 25 -5 0zm42 0l0 -28 -11 0 0 -4 26 0 0 4 -11 0 0 28 -4 0zm20 0l0 -32 5 0 0 32 -5 0zm11 -15c0,-6 2,-10 5,-13 2,-3 6,-4 11,-4 3,
+				0 6,0 8,2 3,1 4,3 6,6 1,2 2,5 2,8 0,4 -1,6 -2,9 -2,3 -4,5 -6,6 -3,1 -5,2 -8,2 -3,0 -6,-1 -8,-2 -3,-2 -5,-4 -6,-6 -1,-3 -2,-6 -2,-8zm5 0c0,4 1,7 3,9 2,2 5,3 8,3 3,
+				0 6,-1 8,-3 2,-2 3,-6 3,-10 0,-2 0,-5 -1,-7 -1,-2 -2,-3 -4,-4 -2,-1 -4,-2 -6,-2 -3,0 -6,1 -8,3 -2,2 -3,6 -3,11zm32 15l0 -32 5 0 17 25 0 -25 4 0 0 32 -4 0 -18 -25 0 
+				25 -4 0zm69 -266c3,0 7,1 10,3 4,1 6,4 8,7 2,4 3,7 3,11 0,4 -1,7 -3,10 -2,4 -4,6 -8,8 -3,2 -7,3 -10,3 -4,0 -8,-1 -11,-3 -4,-2 -6,-4 -8,-8 -2,-3 -3,-6 -3,-10 0,-4 1,-7
+				3,-11 2,-3 5,-6 8,-7 3,-2 7,-3 11,-3zm0 3c-3,0 -6,1 -9,3 -3,1 -5,3 -7,6 -2,3 -2,6 -2,9 0,3 0,6 2,9 2,2 4,5 7,6 3,2 6,2 9,2 3,0 6,0 9,-2 2,-1 5,-4 6,-6 2,-3 3,-6 3,-9
+				0,-3 -1,-6 -3,-9 -1,-3 -4,-5 -7,-6 -2,-2 -5,-3 -8,-3zm-10 30l0 -23 8 0c3,0 5,0 6,1 1,0 2,1 3,2 1,1 1,2 1,3 0,2 -1,3 -2,4 -1,2 -3,2 -5,2 1,1 2,1 2,2 1,0 2,2 4,4l3 5
+				-5 0 -2 -4c-2,-3 -3,-5 -4,-5 -1,-1 -2,-1 -3,-1l-2 0 0 10 -4 0zm4 -13l4 0c3,0 4,-1 5,-1 1,-1 1,-2 1,-3 0,0 0,-1 0,-1 -1,-1 -1,-1 -2,-2 -1,0 -2,0 -4,0l-4 0 0 7z"/>
+
+			</g>
+			
+		<!-- dashboard --> 	
+			
+			<g id="section1" display="block" >
+			
+				<!--<circle class="fil1" cx="4000" cy="7405" r="2800"  stroke="aqua" stroke-width="55.5551" stroke-dasharray="2400 15184" transform="rotate(135 4000 7405)" /> -->  
+				
+				<circle class="fil1 str1" transform="rotate(90 4000 7405.5) matrix(2.2262E-014 0.840568 0.840568 -2.2262E-014 4000 7405.5)" r="3331" stroke-dasharray="1615 19404"/>
+				
+				<text x="809" y="1447" class="fil3 fnt0" onclick='lly(4000,7400, 2800)' >neoX</text>
+			   
+				<circle class="fil0 str1" cx="4000" cy="10208.5" r="67"/>  
+				<circle class="fil0 str1" cx="2017.99" cy="9387.52" r="167"/> 
+				<circle class="fil0 str4" cx="1197.01" cy="7405.5" r="67"/>
+				<circle class="fil0 str4" cx="2017.99" cy="5423.49" r="67"/>
+				<circle class="fil0 str4" cx="4000" cy="4603" r="167"/>
+				<circle class="fil0 str4" cx="5982.03" cy="5423.49" r="167"/>
+				<circle class="fil0 str4" cx="6803" cy="7405.5" r="167"/>
+				<circle class="fil0 str4" cx="5982.02" cy="9387.52" r="67"/>
+				
+				<path id="indicator" class="fil1 str1" d="M4181 5480c920,86 1653,819 1739,1739m0 362c-86,920 -819,1653 -1739
+				,1739m-362 0c-920,-86 -1653,-819 -1739,-1739m0 -362c86,-920 819,-1653 1739,-1739" onclick="active1()"/>
+		  
+			</g>
+			
+		  
+		<!-- zero --> 
+		 
+		 
+			<g id="section2" style="display: none">
+			
+				<path id="indicator5" class="fil1 str1" d="M4181 5480c920,86 1653,819 1739,1739m0 362c-86,920 -819,1653 -1739,1739m-362 0c-920,-86 -1653,-819 -1739,-1739m0 -362c86,-920 819,-1653 1739,-1739"/>
+				
+				<path id="halfpath1" class="fil1 str3" d="M2214 9511c-588,-492 -953,-1213 -988,-1996 -70,-1527 1111,-2822 2638,-2891 1527,-69 2821,1113 2891,2640 39,868 -332,1698 -989,2447"/>
+				
+				<circle style="fill:transparent" cx="4000" cy="7406" r="2153" />
+				
+				<text id = "zerocap label" x="809" y="1447" class="fil3 fnt0">Zero Cap</text>
+					 
+				<circle class="fil0 str4" cx="2214.47" cy="9511" r="67"/>  
+				
+				<circle class="fil0 str4" cx="5983" cy="9446" r="167"/>
+				
+				<g id="Dashboard1">
+				</g>
+				<circle id="knob1" class="fil0 str1" cx="4000" cy="4603" r="167" onmousedown = "tracking(true)" ontouchstart = "tracking(true)"/>
+			
+			</g> 
+			
+		<!-- days --> 
+		  
+			<g id="section3"  style="display: none">
+			
+				<path id="indicator4" class="fil1 str1" d="M4181 5480c920,86 1653,819 1739,1739m0 362c-86,920 -819,1653 -1739,1739m-362 0c-920,-86 -1653,-819 -1739,-1739m0 -362c86,-920 819,-1653 1739,-1739"/>
+				
+				<circle style="fill:transparent" cx="4000" cy="7406" r="2153" />
+				
+				<text  x="809" y="1447" class="fil3 fnt0">Days</text>
+				
+				
+				<circle id="Day0" class="fil0 str4" cx="2017.99" cy="9387.52"  r="167" /> 
+				<circle id="Day1" class="fil0 str4" cx="1197.01" cy="7405.5"   r="167" />
+				<circle id="Day2" class="fil0 str4" cx="2017.99" cy="5423.49"  r="167" />
+				<circle id="Day3" class="fil0 str4" cx="4000"    cy="4603"     r="167" />
+				<circle id="Day4" class="fil0 str4" cx="5982.03" cy="5423.49"  r="167" />
+				<circle id="Day5" class="fil0 str4" cx="6803"    cy="7405.5"   r="167" />
+				<circle id="Day6" class="fil0 str4" cx="5982.02" cy="9387.52"  r="167" />  
+				
+				<circle  class="fil6" cx="2017.99" cy="9387.52""  r="367" onclick="Day(0)"/> 
+				<circle  class="fil6" cx="1197.01" cy="7405.5"   r="367" onclick="Day(1)"/>
+				<circle  class="fil6" cx="2017.99" cy="5423.49"  r="367" onclick="Day(2)"/>
+				<circle  class="fil6" cx="4000"    cy="4603"     r="367" onclick="Day(3)"/>
+				<circle  class="fil6" cx="5982.03" cy="5423.49"  r="367" onclick="Day(4)"/>
+				<circle  class="fil6" cx="6803"    cy="7405.5"   r="367" onclick="Day(5)"/>
+				<circle  class="fil6" cx="5982.02" cy="9387.52"  r="367" onclick="Day(6)"/> 
+				
+			</g>
+		<!-- time --> 
+			
+			<g id="section4" display="none">
+			
+				
+				<path id="halfpath2" class="fil1 str0" d="M2623 4962c406,-231 876,-362 1377,-362 1546,0 2800,1254 2800,2800 0,1546 -1254,2800 -2800,2800 -1546,0 -2800,-1254 -2800,-2800 0,-1033 560,-1936 1393,-2421"/>
+				
+				<path id="indicator5" class="fil1 str1" d="M4181 5480c920,86 1653,819 1739,1739m0 362c-86,920 -819,1653 -1739,1739m-362 0c-920,-86 -1653,-819 -1739,-1739m0 -362c86,-920 819,-1653 1739,-1739"/>
+				
+				<circle style="fill:transparent" cx="4000" cy="7406" r="2153" onclick="Time(index)"/>
+				
+				<text  x="809" y="1447" class="fil3 fnt0">Time</text>
+				
+				<g id="Dashboard2">
+				
+					<circle id="time0" class="fil0 str4" cx="2623" cy="4962" r="67" onclick="time(0)" style="stroke: aqua;"></circle>
+					<circle id="time1" class="fil0 str4" cx="3299.225341796875" cy="4688.25439453125" r="71.16666666666667" onclick="time(1)"></circle>
+					<circle id="time2" class="fil0 str4" cx="4023.48876953125" cy="4600.1005859375" r="75.33333333333333" onclick="time(2)"></circle>
+					<circle id="time3" class="fil0 str4" cx="4746.13330078125" cy="4700.5791015625" r="79.5" onclick="time(3)"></circle>
+					<circle id="time4" class="fil0 str4" cx="5417.88720703125" cy="4985.2216796875" r="83.66666666666667" onclick="time(4)"></circle>
+					<circle id="time5" class="fil0 str4" cx="5993.265625" cy="5433.86083984375" r="87.83333333333334" onclick="time(5)"></circle>
+					<circle id="time6" class="fil0 str4" cx="6434.0107421875" cy="6015.30517578125" r="92" onclick="time(6)"></circle>
+					<circle id="time7" class="fil0 str4" cx="6709.37158203125" cy="6690.91455078125" r="96.16666666666667" onclick="time(7)"></circle>
+					<circle id="time8" class="fil0 str4" cx="6799.95751953125" cy="7414.87255859375" r="100.33333333333334" onclick="time(8)"></circle>
+					<circle id="time9" class="fil0 str4" cx="6701.69970703125" cy="8137.8232421875" r="104.5" onclick="time(9)"></circle>
+					<circle id="time10" class="fil0 str4" cx="6419.134765625" cy="8810.451171875" r="108.66666666666667" onclick="time(10)"></circle>
+					<circle id="time11" class="fil0 str4" cx="5972.25927734375" cy="9387.1962890625" r="112.83333333333334" onclick="time(11)"></circle>
+					<circle id="time12" class="fil0 str4" cx="5392.1748046875" cy="9829.7265625" r="117" onclick="time(12)"></circle>
+					<circle id="time13" class="fil0 str4" cx="4717.42138671875" cy="10107.1796875" r="121.16666666666667" onclick="time(13)"></circle>
+					<circle id="time14" class="fil0 str4" cx="3993.746337890625" cy="10199.990234375" r="125.33333333333334" onclick="time(14)"></circle>
+					<circle id="time15" class="fil0 str4" cx="3270.495361328125" cy="10103.9541015625" r="129.5" onclick="time(15)"></circle>
+					<circle id="time16" class="fil0 str4" cx="2596.9970703125" cy="9823.466796875" r="133.66666666666669" onclick="time(16)"></circle>
+					<circle id="time17" class="fil0 str4" cx="2018.8758544921875" cy="9378.3720703125" r="137.83333333333334" onclick="time(17)"></circle>
+					<circle id="time18" class="fil0 str4" cx="1574.5723876953125" cy="8799.6396484375" r="142" onclick="time(18)"></circle>
+					<circle id="time19" class="fil0 str4" cx="1295.0350341796875" cy="8125.74755859375" r="146.16666666666669" onclick="time(19)"></circle>
+					<circle id="time20" class="fil0 str4" cx="1200.0037841796875" cy="7402.3603515625" r="150.33333333333334" onclick="time(20)"></circle>
+					<circle id="time21" class="fil0 str4" cx="1293.830078125" cy="6678.818359375" r="154.5" onclick="time(21)" style="stroke: aqua;"></circle>
+					<circle id="time22" class="fil0 str4" cx="1572.2257080078125" cy="6004.45361328125" r="158.66666666666669" onclick="time(22)"></circle>
+					<circle id="time23" class="fil0 str4" cx="2015.5662841796875" cy="5424.9853515625" r="162.83333333333334" onclick="time(23)" style="stroke: aqua;"></circle>
+					
+				
+				</g>
+				
+				<circle id="knob2" class="fil6 str1" cx="2623" cy="4962" r="220"  onmousedown = "tracking(true)" ontouchstart = "tracking(true)"/>
+			</g> 
+
+</svg>
+<script>
+var ws;
+var wsUri = "ws:";
+var config = {"act": true, "pb": 500, "zero": 0, "day": [1,1,1,1,1,1,1], 
+			 "schedule": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1], "cap": 20, "time": "04:00", "pcount": 3476, "bcount": 557, "acount": 902, 
+			 "tcount": 5754, "estop": 1, "status": true, "state": "get"};
+			 
+var dayname = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+//var loc = window.location;
+
+//if (loc.protocol === "https:") { wsUri = "wss:"; }
+
+//wsUri += "//" + loc.host + loc.pathname.replace("demo","ws/air");
+
+const scale = (num, in_min, in_max, out_min, out_max) => { return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min; }
+
+//var wsUri = "wss://ws:arukastech.com:1880/ws/login/neo803";
+var wsUri = "wss://ws.arukastech.com/account/neo803"
+
+function wsConnect() 
+	{
+	ws = new WebSocket(wsUri);	
+	ws.onmessage = function(msg) 
+		{
+		var data = JSON.parse(msg.data);
+		//console.log(data);
+		if("master" in data)
+			{
+			if("config" in data.master)
+				{
+				config = data.master.config;
+				//console.log(config);
+				daysupdate();
+				scheduleupdate();
+				updateslider("zero", config.zero);
+				updateslider("cap", config.cap);
+				}
+			else if("burn" in data.master)
+				{
+				burncount(data.master.burn);
+				}
+			}
+
+		}
+	
+	ws.onopen = function() 
+		{					
+		console.log("connected");
+		pallavi("get","get");
+		}
+
+	ws.onclose = function() 
+		{
+		console.log("not connected");
+		setTimeout(wsConnect,3000);
+		pallavi("get","get");
+		}
+
+	}
+	
+function pallavi(st,trg)
+	{
+	var page = {config};
+	page.config.state = st;
+	page.config.trg = trg;
+	var msg = {page};
+	msg = JSON.stringify(msg);
+	if(ws) { ws.send(msg); }
+	}
+	
+//-------------------------- common functions -----------------------------//	
+
+function burncount(con)
+{
+	
+	console.log(timeConvert(con));
+	document.getElementById("timeleft").innerHTML = timeConvert(con);
+	document.getElementById("timeleft").setAttribute("class", "fil5 fnt0");
+										
+}
+
+function timeConvert(n) {
+var num = n;
+var hours = (num / 60);
+var rhours = Math.floor(hours);
+var minutes = (hours - rhours) * 60;
+var rminutes = Math.round(minutes);
+return ("0" + rhours).slice(-2) + ":" + ("0" + rminutes).slice(-2);
+}
+
+function toggle(tog,on,off)
+{
+	if(tog === on)
+		tog=off;
+	else
+		tog=on;
+	return tog;
+}
+
+function AniElements(enable, ele, cls1, cls2)
+{
+	if(enable>=0)
+	{
+	console.log("add");
+	document.getElementById(ele).classList.add(cls1);	
+	document.getElementById(ele).classList.remove(cls2);	
+	}else{
+	console.log("remove");
+	document.getElementById(ele).classList.add(cls2);
+	document.getElementById(ele).classList.remove(cls1);		
+	}
+}
+
+function ColElements(ele, cls)
+{
+	document.getElementById(ele).style.stroke = ("stroke",cls);
+}
+
+function BlockElements(enable, ele, cls1, cls2)
+{
+	if(enable>=0)
+	{
+	console.log("come line");
+	document.getElementById(ele).style.display  = cls1;
+	}else{
+	document.getElementById(ele).style.display = cls2;
+	console.log("go line");
+	}
+}
+
+//---------------------------day function---------------------------
+
+
+					function Day(week)
+						{
+					
+						config.day[week] = toggle(config.day[week], week, -1);
+						AniElements(config.day[week], "Day"+week, "addAnimation", "reverseAnimation");
+						BlockElements(config.day[week], week, "block", "none");
+						pallavi("set");
+						}
+						
+						
+					function daysupdate()
+						{
+						for(var i=0; i<7; i++)
+							{
+								if(config.day[i]>=0)
+								{
+									document.getElementById("Day"+i).classList.add("addAnimation");
+									document.getElementById("Day"+i).classList.remove("reverseAnimation");
+									document.getElementById(i).style.display = "block";
+								}
+								else
+								{
+									document.getElementById("Day"+i).classList.add("reverseAnimation");
+									document.getElementById("Day"+i).classList.remove("addAnimation");
+									document.getElementById(i).style.display = "none";
+								}
+							}
+						
+						}
+						
+//------------------------------------------------
+
+
+					function Time(s)
+						{
+							config.schedule[s]= toggle(config.schedule[s],s,-1); 
+							
+							console.log(config.schedule[s]);
+							if(config.schedule[s]>=0)
+							{
+							ColElements("time"+[s],"aqua");
+							}
+							else
+							{
+							ColElements("time"+[s],"gray");
+							}
+							pallavi("set");
+						}
+						
+				
+				
+					
+					function scheduleupdate()
+						{
+							for(var i=0; i<24; i++)
+							{
+								
+								if(config.schedule[i]>=0 )
+									{
+										//console.log(config.schedule[i]);
+										ColElements("time"+i,"aqua");
+									}
+								else
+									{
+										ColElements("time"+i,"gray");
+									}
+							}
+
+						}
+						
+						
+						
+
+function active1()
+{
+	var password = prompt("Enter the password");
+	if(password === "ash")
+		{
+		//console.log("working");
+		pallavi("burn", "burn");
+		}
+}
+
+//-----------------------------------------next-----------
+
+function lly(a, b, r)
+{
+		//console.log("first");
+		var f = "";
+		var div = 40;
+		var a;
+		for(var j = 0; j<=div; j++)
+		{
+		angle = j * (360/div);
+			
+        x[j] = (a + r * Math.cos(angle*0.0174444));
+        y[j] = (b + r * Math.sin(angle*0.0174444));
+		//console.log(x[j]);
+		//console.log(y[j]);
+		//f+="<circle id='interval"+j+"' class='fil0 str1' cx='"+(x[j]-(j*100))+"' cy='"+(y[j]+(j*100))+"' r='167'/>";
+		f+="<circle id='interval"+j+"' class='fil0 str1' cx='"+(x[j])+"' cy='"+(y[j])+"' r='167'/>";
+		}
+	
+		
+		//document.getElementById("Dashboard").innerHTML = f;
+		//document.getElementById("Dashboard").innerHTML = a;	
+      
+}
+
+
+//-----------------------------------------------------------------------------------------------
+
+var svg=document.getElementById("svg1");
+var pt = svg.createSVGPoint();
+var	points = [];
+var k = [];
+var index;
+var res;
+
+function selectmenu(n,tar,res)
+	{
+		var a = "cap";
+		var b = "zero";
+		var c = "day";
+		var d = "schedule";
+		for (var l=1;l<5;l++)
+		{
+		document.getElementById("section"+l).style.display = "none";
+		}
+		document.getElementById("section"+n).style.display = "block";
+
+			
+			if(tar === a)
+			{
+				document.getElementById(a+"word").setAttribute("class", "fil4 fnt1");
+				document.getElementById(a).setAttribute("class", "fil4 fnt0");
+				document.getElementById(b+"word").setAttribute("class", "fil3 fnt1");
+				document.getElementById(b).setAttribute("class", "fil3 fnt0");
+				document.getElementById("timeleft").setAttribute("class", "fil3 fnt0");
+				for(var i=0;i<7; i++)
+				{
+				document.getElementById(i).setAttribute("class", "fil3 str6");
+				document.getElementById(c+i).setAttribute("class", "fil3 fnt1");
+				}
+				
+			}
+			else if(tar === b)
+			{
+				document.getElementById(b+"word").setAttribute("class", "fil4 fnt1");
+				document.getElementById(b).setAttribute("class", "fil4 fnt0");
+				document.getElementById(a+"word").setAttribute("class", "fil3 fnt1");
+				document.getElementById(a).setAttribute("class", "fil3 fnt0");
+				document.getElementById("timeleft").setAttribute("class", "fil3 fnt0");
+				for(var i=0;i<7; i++)
+				{
+				document.getElementById(i).setAttribute("class", "fil3 str6");
+				document.getElementById(c+i).setAttribute("class", "fil3 fnt1");
+				}
+			}
+			else if(tar === c)
+			{
+				document.getElementById(a+"word").setAttribute("class", "fil3 fnt1");
+				document.getElementById(a).setAttribute("class", "fil3 fnt0");
+				document.getElementById(b+"word").setAttribute("class", "fil3 fnt1");
+				document.getElementById(b).setAttribute("class", "fil3 fnt0");
+				document.getElementById("timeleft").setAttribute("class", "fil3 fnt0");
+				for(var i=0;i<7; i++)
+				{
+				document.getElementById(i).setAttribute("class", "fil4 str6");
+				document.getElementById(c+i).setAttribute("class", "fil4 fnt1");
+				}
+			}
+			else if(tar === d)
+			{
+				document.getElementById(a+"word").setAttribute("class", "fil3 fnt1");
+				document.getElementById(a).setAttribute("class", "fil3 fnt0");
+				document.getElementById(b+"word").setAttribute("class", "fil3 fnt1");
+				document.getElementById(b).setAttribute("class", "fil3 fnt0");
+				document.getElementById("timeleft").setAttribute("class", "fil4 fnt0");
+				for(var i=0;i<7; i++)
+				{
+				document.getElementById(i).setAttribute("class", "fil3 str6");
+				document.getElementById(c+i).setAttribute("class", "fil3 fnt1");
+				}
+			}
+			target = tar;
+			rez(res, tar);
+			console.log(tar);
+			updateslider(tar,res);
+			//document.getElementById("zerocap label").innerHTML = jsUcfirst(tar);
+	}
+
+
+function jsUcfirst(string) 
+{
+console.log(string);
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function rez(res, tar)
+{
+	var a = "halfpath1";
+	var dot = false;
+	if(tar === "schedule")
+	{
+	a = "halfpath2"
+	dot = true;
+	}
+	for(var j = 0; j<=res; j++)
+	{
+	points[j] = document.getElementById(a).getPointAtLength((document.getElementById(a).getTotalLength()/res)*j);	
+	}
+	seg = res;
+}
+
+function adddots(res)
+{
+	var a = "";
+	
+	for(j = 0; j<=res; j++)
+	{
+		a += "<circle id='time"+j+"' class='fil0 str4' cx='"+(points[j].x)+"' cy='"+(points[j].y)+"' r='" + (67 + (100/res)*j) + "' onclick='time("+j+")'/>";
+	}
+	document.getElementById("Dashboard2").innerHTML = a;
+}
+
+
+function updateslider(tar,res)
+{
+	//console.log(tar);
+	for(j=0;j<res;j++)
+	{
+		
+		//console.log(config[tar]);
+		//document.getElementById(tar).innerHTML = config[tar];
+		selection(tar, config[tar]);
+	}
+}
+
+function selection(tar,index)
+{
+		if(tar == "schedule")
+		{
+		document.getElementById("knob2").setAttribute("cx", points[index].x);
+		document.getElementById("knob2").setAttribute("cy", points[index].y);
+		//index = Math.round(scale(index, 0, 24, 16, 20));
+	
+		}
+		else
+		{
+		document.getElementById("knob1").setAttribute("cx", points[index].x);
+		document.getElementById("knob1").setAttribute("cy", points[index].y);	
+		document.getElementById(tar).innerHTML = index;
+		config[tar] = index;
+		pallavi("set", tar);
+		}
+
+}
+
+function tracking(enable)
+{
+	if(enable)
+	{
+	//console.log("alive");
+	document.getElementById("bodie").setAttribute("onmousemove","slider(event,false,'" + target +"')");
+	document.getElementById("bodie").setAttribute("ontouchmove","slider(event,true,'" + target +"')");
+	}
+	else
+	{
+	//console.log("dead");
+	document.getElementById("bodie").setAttribute("onmousemove",null);
+	document.getElementById("bodie").setAttribute("ontouchmove",null);
+	}
+}
+
+function slider(evt,tch,tar)  //(event,true,4000,20,25,false,'zero',2,true)finding min distance of angle and jumping
+{       
+	index = 0;
+	dist = [];
+	var pointer;
+	
+	if(!tch)
+	{pointer = invsvg(evt.clientX, evt.clientY)
+	//console.log("mouse");
+	}
+	else
+	{pointer = invsvg(evt.touches[0].clientX, evt.touches[0].clientY)
+	//console.log("touch");
+	}
+	
+	
+	for(var j = 0; j < seg; j++)
+	{
+		dist[j] = Math.sqrt(Math.pow((pointer.x - points[j].x),2)+Math.pow((pointer.y - points[j].y),2));
+		if(dist[j] < dist[index])
+		{
+			index = j;
+			
+		}
+	}
+	selection(tar,index);
+}
+
+function invsvg(x,y)                                                        // for inverting points from window to svg; 
+{
+	pt.x = x;
+	pt.y = y;
+	invpoint = pt.matrixTransform(svg.getScreenCTM().inverse());
+	return invpoint;
+}
+
+
+
+</script>
+</body>
+
+</html>
